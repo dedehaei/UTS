@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Sistem Temu Kembali</title>
+<title>Sistem Temu Kembali </title>
 <!--<link  href="../jw.png" rel="shortcut icon" type="image/png" />-->
 <style>
 h2 {
@@ -10,7 +10,8 @@ h2 {
 </style>
 </head>
 <body>
-<h2 align=center><br>Sistem Temu Kembali Informasi<br><br></h2>
+<h2 align=center><br>Sistem Temu Kembali Informasi <br>Dokumen Tema Drone Menggunakan Algoritma Bray&Curtis<br><br></h2>
+
 <hr>
 <div align=center>
 | <a href="koneksi.php">Koneksi</a> |
@@ -26,8 +27,15 @@ h2 {
 <a href="tf.php">Term Frequency</a> |
 <a href="idf.php">Invers Document Frequency</a> |
 <a href="tfidf.php">TF.IDF</a> |
-<a href="search.php">Search1</a> |
-<a href="search1.php">Search2</a> |
+<a href="search.php">Tfidf1</a> |
+<a href="search1.php">Tfidf2</a> |
+<a href="search2.php">Tfidf3</a> |
+<a href="searchjaccard1.php">Jaccard1</a> |
+<a href="searchjaccard2.php">Jaccard2</a> |
+<a href="searchjaccard3.php">Jaccard3</a> |
+<a href="bray1.php">bray&curtis 1</a> |
+<a href="bray2.php">bray&curtis 2</a> |
+<a href="bray3.php">bray&curtis 3</a> |
 </div>
 <hr/>
 </body>

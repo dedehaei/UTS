@@ -3,8 +3,6 @@ include "index.php";
 include "koneksi.php";
 
 echo "<p align=center></p";
-// konek ke database
-//include "dibaliklayar/koneksi.php";
 $keyword = $_GET["keyword"]; // ambil keyword
 
    $search_exploded = explode(" ",$keyword); // hilangkan keyword dari spasi
@@ -30,27 +28,10 @@ $keyword = $_GET["keyword"]; // ambil keyword
    
 	// tampilkan kotak pencarian dan jumlah hasil pencarian
 
-	  echo "<br /><br><table><tr><td></td><td><form action='searchs1.php' method='GET'><input type='text' onclick=value='' size='50' name='keyword' value='$keyword' style='width: 500px; height: 30px; font-size: 16px;'> <input type='submit' value='Search'></form></td></tr></table>";
+	  echo "<br /><br><table><tr><td></td><td><form action='searchs2.php' method='GET'><input type='text' onclick=value='' size='50' name='keyword' value='$keyword' style='width: 500px; height: 30px; font-size: 16px;'> <input type='submit' value='Search'></form></td></tr></table>";
 // select distinct utk mengambil berita agar tdk duplikasi
 ?>
-<!--
-<table border=1 cellpadding=5 cellspacing=0>
-<tr>
-<td>Id</td>
-<td>Kata</td>
-<td>Term Frequency</td>
-<td>Invers Document Frequency</td>
-<td>TF.IDF</td>
-</tr><br><br>
--->
 
-<table border=1 cellpadding=5 cellspacing=0>
-<tr>
-<td>Id</td>
-<td>Judul</td>
-<td>Isi</td>
-<td>Url</td>
-</tr><br><br>
 <?php
 
 
@@ -61,17 +42,7 @@ $result=mysqli_query($koneksi,$query);
 $numrows=mysqli_num_rows($result);
 $no=1;
 while($row = mysqli_fetch_array($result)){
-echo "<tr>";
-/*echo "<td><font color=blue></font>" . " $row[id] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[kata] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[tf] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[idf] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[tf_idf] " . "<br></td>";*/
-echo "<td><font color=blue></font>" . " $row[id] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[judul] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[isi] " . "<br></td>"; 
-echo "<td><font color=blue></font>" . " $row[url] " . "<br></td>"; 
-echo "</tr>";
+echo "<p align='left'><font color=blue> <a href=" . " $row[url] " . "target='_blank'".">$row[url]</a>  " . "</font><br>" . " <font size='5' color=green> $row[judul] " . "</font><br>" . " $row[isi] " . "<br><br></p>"; 
 $no++;
 }
 ?>
